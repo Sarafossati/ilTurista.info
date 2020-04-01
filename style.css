@@ -1,0 +1,170 @@
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HEADER */
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.rettangolo{
+    width: 330px;
+    height: 1000px;
+    background-color: #212D87;
+}
+
+.titolo{
+    margin-top: 30px;
+}
+
+.menu-social{
+    margin-top: 70px;
+}
+
+.menu{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.loghi{
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.active{
+    text-decoration: underline;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+.cerca{
+    padding: 6px;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-top: 35px;
+    font-size: 17px;
+    width: 200px;
+    background-color: #212D87;
+}
+
+.logocerca{
+    margin-left: 10px;
+    color: #ffffff;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: url(img/banner1.png) no-repeat center center;
+}
+
+.schermo{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.rettangolotitolo{
+    height: 100px;
+    width: 800px;
+    background-color: #ffffff;
+}
+
+.testotitolo{
+    margin-left: 300px;
+    margin-top: 560px;
+}
+
+h1{
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+h4{
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+p{
+    margin-left: 350px;
+}
+
+/* FIXED SCROLL  */
+
+.fisso{
+    background-color: #212D87;
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* CHI SIAMO  */
+
+
+.rettangolochisiamo{
+    background-color: #515BD4;
+    height: 200px;
+    width: 1000px;
+    position: relative;
+    margin-left: 440px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.chisiamo{
+    text-align: left;
+    padding: 8px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.rettangolo-bianco{
+    height: 50px;
+    width: 200px;
+    background-color: #ffffff;
+    border: #515BD4 solid 2px;
+}
+
+.chisiamotesto{
+    color: #ffffff;
+    font-size: 18px;
+    padding-right: 100px;
+    width: auto;
+}
