@@ -111,6 +111,7 @@ h1{
     text-align: center;
     font-size: 36px;
     font-weight: bold;
+    text-shadow: 1px 1px 3px #666666;
 }
 
 h4{
@@ -136,7 +137,6 @@ p{
 
 /* CHI SIAMO  */
 
-
 .rettangolochisiamo{
     background-color: #515BD4;
     height: 200px;
@@ -148,9 +148,9 @@ p{
 }
 
 .chisiamo{
-    text-align: left;
-    padding: 8px;
-    font-size: 28px;
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
     font-weight: bold;
     color: #000000;
 }
@@ -166,5 +166,27 @@ p{
     color: #ffffff;
     font-size: 18px;
     padding-right: 100px;
-    width: auto;
+    float: right;
+    width: 800px;
+    text-align: center;
+}
+
+/* IDEE DI VIAGGIO  */
+
+.rettangoloviaggio{
+    background-color: #737BE1;
+    height: 400px;
+    width: 1000px;
+    position: relative;
+    margin-left: 330px;
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.rettangolo-bianco-viaggio{
+    height: 50px;
+    width: 300px;
+    background-color: #ffffff;
+    border: #515BD4 solid 2px;
+    float: right;
 }
