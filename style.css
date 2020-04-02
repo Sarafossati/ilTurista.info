@@ -17,7 +17,8 @@ time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;
+    vertical-align: baseline;
+    box-sizing: border-box;
 }
 
 /* HEADER */
@@ -31,10 +32,22 @@ body{
     flex-wrap: wrap;
 }
 
-.rettangolo{
+.menufisso {
+    position: fixed;
     width: 330px;
-    height: 1000px;
-    background-color: #212D87;
+    height:1000px;
+    background: #212D87;
+}
+
+.maintotale {
+    grid-column-start: 2;
+    padding:1rem;
+}
+
+.pagina {
+    display: grid;
+    grid-template-columns: 20vw auto;
+
 }
 
 .titolo{
@@ -125,26 +138,16 @@ p{
     margin-left: 350px;
 }
 
-/* FIXED SCROLL  */
-
-.fisso{
-    background-color: #212D87;
-    position:fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-}
-
 /* CHI SIAMO  */
 
 .rettangolochisiamo{
     background-color: #515BD4;
-    height: 200px;
     width: 1000px;
-    position: relative;
-    margin-left: 440px;
-    margin-top: 100px;
-    margin-bottom: 70px;
+    height: 180px;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    margin-top: 70px;
 }
 
 .chisiamo{
@@ -175,12 +178,12 @@ p{
 
 .rettangoloviaggio{
     background-color: #737BE1;
-    height: 400px;
+    height: 500px;
     width: 1000px;
-    position: relative;
-    margin-left: 330px;
-    margin-top: 100px;
-    margin-bottom: 70px;
+    padding:10px;
+    position: absolute;
+    left: 330px;
+    margin-top: 300px;
 }
 
 .rettangolo-bianco-viaggio{
@@ -192,39 +195,78 @@ p{
 }
 
 .bottone{
-    width: 80px;
-    height: 30px;
     border: 1px solid #212D87;
-    background: #212D87;
+    background-color: #212D87;
     text-align: center;
     color: #ffffff;
     font-size: 16px;
     border-radius: 5px;
-    margin-left: 60px;
+    margin-left: 40px;
+    margin-top: 10px;
 }
 
 .bottone1{
-    width: 110px;
-    height: 30px;
     border: 1px solid #212D87;
-    background: #212D87;
+    background-color: #212D87;
     text-align: center;
     color: #ffffff;
     font-size: 16px;
     border-radius: 5px;
-    margin-left: 45px;
+    margin-left: 25px;
+    margin-top: 10px;
 }
 
-.foto{
-    border-radius: 25px;
-    margin-top: 100px;
-    margin-left: 25px;
+article{
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: 225px;
 }
 
 .wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 25px;
+    column-gap: 35px;
+    padding-left: 30px;
 }
 
+.mare{
+    background-image: url(img/mare.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
 
+.montagna{
+    background-image: url(img/montagna.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.lago{
+    background-image: url(img/lago.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.citta{
+    background-image: url(img/citta.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.campagna{
+    background-image: url(img/campagna.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+article{
+    margin-top: 100px;
+}
+
+.esplora{
+    text-align: center;
+    color: #ffffff;
+    position: relative;
+    margin: auto;
+    margin-top: 40px;
+}
