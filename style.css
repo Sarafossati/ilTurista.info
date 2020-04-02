@@ -27,9 +27,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: lighter;
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
 }
 
 .menufisso {
@@ -52,6 +49,8 @@ body{
 
 .titolo{
     margin-top: 30px;
+    max-width: 100%;
+    height: auto;
 }
 
 .menu-social{
@@ -270,3 +269,4 @@ article{
     margin: auto;
     margin-top: 40px;
 }
+
