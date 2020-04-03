@@ -1,50 +1,28 @@
-/* RESET CSS */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-    vertical-align: baseline;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
-/* HEADER */
-
-body{
+body {
     font-family: 'Montserrat', sans-serif;
     font-size: 20px;
     font-weight: lighter;
 }
 
-.menufisso {
-    position: fixed;
-    width: 330px;
-    height:1000px;
-    background: #212D87;
+h3{
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.maintotale {
-    grid-column-start: 2;
-    padding:1rem;
+p{
+    font-size: 16px;
+    text-align: center;
 }
 
-.pagina {
-    display: grid;
-    grid-template-columns: 20vw auto;
-
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .titolo{
@@ -55,36 +33,31 @@ body{
 
 .menu-social{
     margin-top: 70px;
+    cursor: pointer;
 }
 
-.menu{
-    color: #ffffff;
-    text-decoration: none;
-}
 
-a:hover{
+.menu:hover{
     font-weight: bold;
     text-decoration: underline;
+    cursor: pointer;
+    
 }
 
 .loghi{
     color: #ffffff;
     width: 30px;
     height: 30px;
-    margin-left: 30px;
-    margin-top: 30px;
 }
 
 .active{
     text-decoration: underline;
     font-weight: bold;
-    margin-top: 100px;
 }
 
 .cerca{
     padding: 6px;
     border-radius: 10px;
-    margin-left: 30px;
     margin-top: 35px;
     font-size: 17px;
     width: 200px;
@@ -94,6 +67,12 @@ a:hover{
 .logocerca{
     margin-left: 10px;
     color: #ffffff;
+    cursor: pointer;
+}
+
+/*  GRID  */
+.sidebar {
+    grid-area: sidebar;
 }
 
 .banner{
@@ -102,51 +81,68 @@ a:hover{
     background: url(img/banner1.png) no-repeat center center;
 }
 
-.schermo{
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.rettangolotitolo{
-    height: 100px;
-    width: 800px;
-    background-color: #ffffff;
-}
-
 .testotitolo{
-    margin-left: 300px;
-    margin-top: 560px;
-}
-
-h1{
     text-align: center;
-    font-size: 36px;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px #666666;
+    padding-top: 560px;
 }
 
-h4{
-    margin-top: 10px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: bold;
+main {
+    grid-area: main;
 }
 
-p{
-    margin-left: 350px;
+footer {
+    grid-area: footer;
 }
 
-/* CHI SIAMO  */
+/* default mobile, ma da mettere a scomparsa la sidebar... */
+.container-grid {
+    display: grid;
+    grid-template-areas: "sidebar""main""footer";
+
+}
+
+@media (min-width: 700px) {
+    .container-grid {
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas:
+            "sidebar main"
+            "sidebar footer"
+        ;
+    }
+
+}
+
+.sidebar {
+    position: fixed;
+    height: 100vh;
+    color: #ffffff;
+    background-color: #212D87;
+    padding: 1rem;
+}
+
+.menu-social a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.menu-social li {
+    list-style-type: none;
+    padding: 1rem;
+}
+
+.content {
+    padding: 2rem;
+}
+
+/* CHI SIAMO */
 
 .rettangolochisiamo{
     background-color: #515BD4;
     width: 1000px;
-    height: 180px;
+    height: 200px;
     padding: 10px;
-    position: absolute;
-    right: 0;
-    margin-top: 70px;
+    margin-top: 10px;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .chisiamo{
@@ -173,16 +169,15 @@ p{
     text-align: center;
 }
 
-/* IDEE DI VIAGGIO  */
+/* IDEE DI VIAGGIO */
 
 .rettangoloviaggio{
     background-color: #737BE1;
     height: 500px;
     width: 1000px;
     padding:10px;
-    position: absolute;
-    left: 330px;
-    margin-top: 300px;
+    margin-top: 20px;
+    box-shadow: 5px 10px 8px #888888;
 }
 
 .rettangolo-bianco-viaggio{
@@ -193,6 +188,53 @@ p{
     float: right;
 }
 
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    margin-top: 100px;
+}
+
+.mare{
+    background-image: url(img/mare.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.montagna{
+    background-image: url(img/montagna.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.lago{
+    background-image: url(img/lago.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.citta{
+    background-image: url(img/citta.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+
+.campagna{
+    background-image: url(img/campagna.jpg) no-repeat center center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    height: 100%;
+    width: 100%;
+}
+
 .bottone{
     border: 1px solid #212D87;
     background-color: #212D87;
@@ -200,8 +242,10 @@ p{
     color: #ffffff;
     font-size: 16px;
     border-radius: 5px;
-    margin-left: 40px;
+    margin-left: 60px;
     margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .bottone1{
@@ -211,62 +255,111 @@ p{
     color: #ffffff;
     font-size: 16px;
     border-radius: 5px;
-    margin-left: 25px;
+    margin-left: 40px;
     margin-top: 10px;
-}
-
-article{
-    background-color: #ffffff;
-    border-radius: 15px;
-    height: 225px;
-}
-
-.wrapper{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 35px;
-    padding-left: 30px;
-}
-
-.mare{
-    background-image: url(img/mare.jpg) no-repeat center center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.montagna{
-    background-image: url(img/montagna.jpg) no-repeat center center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.lago{
-    background-image: url(img/lago.jpg) no-repeat center center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.citta{
-    background-image: url(img/citta.jpg) no-repeat center center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-.campagna{
-    background-image: url(img/campagna.jpg) no-repeat center center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-}
-
-article{
-    margin-top: 100px;
+    padding: 5px;
+    cursor: pointer;
 }
 
 .esplora{
     text-align: center;
     color: #ffffff;
-    position: relative;
     margin: auto;
     margin-top: 40px;
 }
 
+.pos1{
+    position: relative;
+    overflow: hidden; 
+    z-index: 1;
+}
+
+.pos2{
+    position: absolute;
+    height: 100px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    color: white; 
+    /* Posizionamento assoluto */
+    bottom: -50px;
+    left: 0px;
+    transition: all 0.5s ease;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.pos2:hover{
+    color: white;
+    bottom: 5px;
+}
+
+.arrow,
+.arrow:before {
+  display: block;
+  margin-left: 50%;
+}
+
+.arrow {
+  width: 20px;
+  height: 20px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-right: 2px #fff solid;
+  border-bottom: 2px #fff solid;
+}
+
+.immagini-animali{
+    margin-top: 30px;
+    display: flex;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.paesaggi{
+    width: 500px;
+    height: auto;
+}
+
+.testo-mucca{
+    padding: 50px;
+    background-color: rgba(92, 99, 195, 0.6);
+}
+
+.testo-strada{
+    padding: 50px;
+    background-color: rgba(87, 204, 204, 0.6);
+}
+
+.testo-spiaggia{
+    padding: 50px;
+    background-color: rgba(14, 131, 14, 0.6);
+}
+
+
+.scopri{
+    border: 1px solid #212D87;
+    background-color: #212D87;
+    text-align: center;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-left: 140px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgb(9, 139, 9);
+    text-decoration: none;
+    font-size: 14px;
+}
+  
+a{
+    text-decoration: none;
+}
