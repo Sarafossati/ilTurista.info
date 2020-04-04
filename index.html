@@ -22,8 +22,7 @@
                         href="index.html"><i class="loghi fas fa-home"></i>Home</a>
                 </li>
                 <li>
-                    <a class="menu"
-                        onclick="Destinazioni()"><i class="loghi fas fa-map-marker-alt"></i>Destinazioni</a>
+                    <a class="menu" onclick="Destinazioni()"><i class="loghi fas fa-map-marker-alt"></i>Destinazioni</a>
                 </li>
                 <script>
                     function Destinazioni() {
@@ -33,7 +32,7 @@
                 </script>
                 <li>
                     <a class="menu"
-                        href="index.html"><i class="loghi far fa-comments"></i></i>Blog</a>
+                        href="index.html"><i class="loghi far fa-comments"></i>Blog</a>
                 </li>
                 <li>
                     <a class="menu"
@@ -47,26 +46,14 @@
                     <a class="menu"
                         href="index.html"><i class="loghi fas fa-users"></i>Redazione</a>
                 </li>
-                <li>
-                    <input class="cerca" type="text" placeholder="Cerca nel sito.." ><i class="logocerca fas fa-search" onclick="Attenzione()"></i>
+                <li class="licerca">
+                    <input class="cerca" type="text" placeholder="Cerca nel sito.." >
                 </li>
-            </ul>
-            <script>
-
-                function Attenzione() {
-                    alert("Pagina non trovata")
-                }
-
-            </script>
-
+            
         </nav>
 
-        <main class="page">
+        <main>
             <div class="banner">
-                <div class="testotitolo">
-                    <h1>Ti piace viaggiare?</h1>
-                    <h4>Esploriamo il Mondo insieme!</h4>
-                </div>
             </div>
             <section class="content">
                 <div class="rettangolochisiamo">
@@ -92,7 +79,7 @@
                                 <div class="pos2">
                                     <div class="arrow"></div>
                                     <br>
-                                    <a href="https://www.ilturista.info/ch/vacanze_mare/"><button class="bottone" type="button">MARE</button></a>
+                                    <a href="index.html"><button class="bottone" type="button">MARE</button></a>
                                 </div>
                             </div>
                         </article>
@@ -102,7 +89,7 @@
                                 <div class="pos2">
                                     <div class="arrow"></div>
                                     <br>
-                                    <a href="https://www.ilturista.info/ch/vacanze_sci/"><button class="bottone1" type="button">MONTAGNA</button></a>
+                                    <a href="index.html"><button class="bottone1" type="button">MONTAGNA</button></a>
                                 </div>
                             </div>
                         </article>
@@ -179,6 +166,26 @@
                     </div>
                 </div>
             </section>
+            <form class="newsletterform">
+                <div class="container">
+                  <h2 class="nwl">Rimani sempre aggiornato!</h2>
+                  <br>
+                  <p class="nwlp">Iscriviti alla nostra Newsletter</p>
+                </div>
+              
+                <div class="container" style="background-color:white">
+                  <input type="text" placeholder="Nome" name="nome" required>
+                  <input type="text" placeholder="Cognome" name="cognome" required>
+                  <input type="text" placeholder="Indirizzo e-mail" name="mail" required>
+                  <label>
+                    <input class="nwlp" type="checkbox" checked="checked" name="subscribe"> Acconsento di ricevere la Newsletter giornaliera
+                  </label>
+                </div>
+              
+                <div class="container1">
+                  <input class="nwlpsubmit" type="submit" value="Iscriviti">
+                </div>
+            </form>
         </main>
         <footer>
             <p>Il sito è stato creato a scopo didattico dagli allievi di Web & Digital Media della Scuola Mohole - MI</p>
